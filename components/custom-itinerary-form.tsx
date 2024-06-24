@@ -72,7 +72,6 @@ const Custom_Form = () => {
   };
 
   const handleCreateItinerary = () => {
-    // Handle the itinerary creation logic here
     console.log("Create Your Itinerary button clicked");
   };
   const steps = [0, 1, 2];

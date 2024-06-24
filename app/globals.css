@@ -16,7 +16,7 @@
     @apply text-2xl leading-5 md:text-[28px] md:leading-6 lg:text-3xl 
   } */
 
-  h1 {
+  /* h1 {
     font-size: clamp(2.5rem, 2vw + 1rem, 3.75rem);
     @apply leading-5 md:leading-6;
   }
@@ -31,7 +31,7 @@
   h4 {
     font-size: clamp(1.5rem, 1.5vw + 0.5rem, 2.25rem);
     @apply leading-5 md:leading-6;
-  }
+  } */
 }
 
 @layer components {
@@ -41,7 +41,7 @@
   title-2{
     @apply text-[18px] leading-5 md:text-[19px] md:leading-6 lg:text-[20px] 
   } */
-  .title-1 {
+  /* .title-1 {
     font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5625rem);
     @apply leading-5 md:leading-6;
   }
@@ -58,5 +58,54 @@
   }
   button {
     @apply text-sm leading-6;
-  }
+  } */
+   .displayl {
+    @apply text-[57px] leading-[64px] font-semibold tracking-[-0.25px]
+   }
+   .displaym {
+    @apply text-[45px] leading-[52px] font-semibold
+   }
+   .displays {
+    @apply text-[36px] leading-[44px] font-semibold
+   }
+
+   .headlinel {
+    @apply text-[32px] leading-[40px] font-semibold 
+   }
+   .headlinem {
+    @apply text-[28px] leading-[36px] font-semibold 
+   }
+   .headlines {
+    @apply text-[24px] leading-[32px] font-semibold 
+   }
+
+   .titlel{
+    @apply text-[22px] leading-[28px]
+   }
+   .titlem{
+    @apply text-[16px] leading-[24px] font-medium tracking-[0.15px]
+   }
+   .titles{
+    @apply text-[14px] leading-[20px] font-medium tracking-[0.1px]
+   }
+
+   .labell{
+    @apply text-[14px] leading-[20px] font-medium tracking-[0.1px]
+   }
+   .labelm{
+    @apply text-[12px] leading-[16px] font-medium tracking-[0.5px]
+   }
+   .labels{
+    @apply text-[11px] leading-[16px] font-medium tracking-[0.5px]
+   }
+
+   .bodyl{
+    @apply text-[16px] leading-[24px] tracking-[0.5px]
+   }
+   .bodym{
+    @apply text-[14px] leading-[20px] tracking-[0.25px]
+   }
+   .bodys{
+    @apply text-[12px] leading-[16px] tracking-[0.4px]
+   }
 }
