@@ -55,7 +55,9 @@ const config: Config = {
         95: '#C2FFD2',
         98: '#E9FFEC',
         99: '#F5FFF5',
-        100:'#FFFFFF'
+        100:'#FFFFFF',
+        container:'#AFF2C2',
+        oncontainer:'#00210F'
       },
       'accent': {
         DEFAULT: '#616118',
@@ -79,6 +81,7 @@ const config: Config = {
         100:'#FFFFFF'
       },
       'error': {
+        DEFAULT:'#BA1A1A',
         0:  '#000000',
         5:  '#2D0001',
         10: '#410002',

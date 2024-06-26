@@ -15,14 +15,14 @@ const Cards = ({ card }: TourCardProps) => {
     return <></>;
   }
   return (
-    <Card className="w-[232px] h-fit lg:w-[292px] lg:h-fit rounded-lg lg:rounded-[10px] bg-[#F8FCFA] shadow-cardShadow ">
-      <div className="relative w-full h-[269px]">
-        <Image src={`/${card.image}.jpg`} fill alt={card.name} />
+    <Card className="w-[232px] h-fit md:w-[289px] lg:w-[292px] lg:h-fit rounded-lg lg:rounded-[10px] bg-[#F8FCFA] shadow-cardShadow ">
+      <div className="relative w-full h-[269px] md:h-[364px]">
+        <Image src={`/${card.image}.jpg`} fill alt={card.title} />
       </div>
       <div className="px-2 py-5 text-[#051E13] flex justify-between items-end">
         <div className="flex flex-col space-y-1">
-          <h2 className="titles md:titlem ">{card.name}</h2>
-          {card.duration && <p className="bodys">{card.duration}</p>}
+          <h2 className="titles md:titlem min-h-10 md:min-h-0">{card.title}</h2>
+          {card.durationn && <p className="bodys">{card.durationn} Nights {card.duarationd} Days</p>}
           {card.originalPrice && (
             <>
               <p className="bodys line-through">
@@ -35,8 +35,8 @@ const Cards = ({ card }: TourCardProps) => {
           )}
         </div>
         <Link href={card.link}>
-          <IconButton className="bg-[#19A96C]">
-            <ArrowForwardIcon className="text-white text-[40px]" />
+          <IconButton className="bg-primary hover:bg-primary/80">
+            <ArrowForwardIcon className="text-white text-[36px] md:text-[40px]" />
           </IconButton>
         </Link>
       </div>

@@ -27,7 +27,7 @@ const HeroHome = () => {
     setSearchValue(event.target.value);
   };
   return (
-    <div className="py-24 px-3 md:px-14 lg:py-36 xl:py-44 bg-[url('../public/images/hero.jpg')] bg-cover bg-center bg-no-repeat w-full h-full rounded-lg flex flex-col gap-4 md:gap-6">
+    <div className="py-24 px-3  md:px-14 lg:py-36 xl:py-44 bg-[url('../public/images/hero.jpg')] bg-cover bg-center bg-no-repeat w-full h-full rounded-lg flex flex-col gap-4 md:gap-6">
       <Stack direction={"column"} gap={1}>
         <h1 className="displays md:displayl text-white">Where to next?</h1>
         <p className="bodym md:titlel text-white">Let us plan your trip</p>

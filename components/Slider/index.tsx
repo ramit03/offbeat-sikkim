@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { UpComingTours } from '@/constants'
 import Cards from '../Cards'
+import { TripDetail } from '@/lib/types'
 
-const Slider = () => {
+interface SliderProps {
+  items: TripDetail[];
+}
+
+const Slider:FC<SliderProps> = ({ items }) => {
   return (
-  
-  <div className="carousel carousel-center max-w-full bg-primary-40 p-4 space-x-4">
-  {UpComingTours.map((tour,index)=>(
+  <div className="carousel carousel-center max-w-full p-1 space-x-4">
+  {items.map((tour,index)=>(
     <div className='carousel-item' key={index}>
       <Cards card={tour}/>
     </div>
