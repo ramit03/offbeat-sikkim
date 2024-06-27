@@ -22,12 +22,21 @@ const Cards = ({ card }: TourCardProps) => {
       <div className="px-2 py-5 text-[#051E13] flex justify-between items-end">
         <div className="flex flex-col space-y-1">
           <h2 className="titles md:titlem min-h-10 md:min-h-0">{card.title}</h2>
-          {card.durationn && <p className="bodys">{card.durationn} Nights {card.duarationd} Days</p>}
-          {card.originalPrice && (
+          {card.durationn && <p className="bodys">{card.durationn} Nights {card.durationd} Days</p>}
+          {
+            card.costDouble &&   <p className="labell">
+           Starts at ₹ {card.costDouble} 
+          </p>
+          }
+          {card.currentPrice && (
             <>
-              <p className="bodys line-through">
-                ₹{card.originalPrice} per head
+             {
+              card.originalPrice && (
+                <p className="bodys line-through">
+                ₹ {card.originalPrice} per head
               </p>
+              )
+             } 
               <h4 className="labell text-[#075232]">
                 ₹{card.currentPrice} per head
               </h4>

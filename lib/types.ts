@@ -2,9 +2,10 @@ export interface CardProps {
     image: string;
     title: string;
     durationn?: string;
-    duarationd?:string,
+    durationd?:string,
     originalPrice?: string;
     currentPrice?: string;
+    costDouble?: string;
     link: string;
   }
 
@@ -48,20 +49,22 @@ export interface CardProps {
     name: string;
     email: string;
     phone: string;
-    travel_style: "Luxury" | "Not" | "Third";
-    places: "Sikkim" | "Meghalaya" | "Third";
-    accommodation: "Luxury" | "Not" | "Third";
+    travel_style: string;
+    places:string;
+    accommodation: string;
   }
   
   export interface Step2FormData {
     destination: string[];
-    date: {
-      from: Date;
-      to: Date;
-    };
+   startDate: string,
+   endDate:string,
   }
-  
-  export interface Step3FormData {}
+
+  export interface Step3FormData {
+    noOfAdults: string;
+    noOfChildren: string;
+    additionalInformation: string;
+  }
   
   export type FormData = Step1FormData & Step2FormData & Step3FormData;
   
