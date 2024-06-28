@@ -5,7 +5,7 @@ import Testimonials from "@/components/pages/Testimonials/page";
 import FeaturedArticles from "@/components/pages/featured-articles/page";
 import HeroHome from "@/components/pages/hero-home/page";
 import { Button } from "@/components/ui/button";
-import { UpComingTours } from "@/constants";
+import { CuratedPackages, Treks, UpcomingTours } from "@/constants";
 
 
 export default function Home() {
@@ -14,7 +14,11 @@ export default function Home() {
     <HeroHome/>
     <section className="py-12 md:py-[76px] space-y-4 md:space-y-9">
       <h2 className="headlines md:displays lg:displaym text-secondary-oncontainer">Upcoming Tours</h2>
-      <Slider items={UpComingTours}/>
+      <Slider items={UpcomingTours}/>
+      <h2 className="headlines md:displays lg:displaym text-secondary-oncontainer">Curated Packages for the Explorer in You</h2>
+      <Slider items={CuratedPackages}/>
+      <h2 className="headlines md:displays lg:displaym text-secondary-oncontainer">Trek Expeditions</h2>
+      <Slider items={Treks}/>
       <Custom_Form/>
       <Testimonials/>
       <FeaturedArticles/>
