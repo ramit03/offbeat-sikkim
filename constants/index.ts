@@ -179,7 +179,7 @@ export const UpComingTours: TripDetail[] = [
   },
   {
     id: "2",
-    image: "test",
+    image: "images/hero",
     title: "Sandakphu Trek",
     desc: 'The Sandakphu-Phalut Trek in the eastern Himalayas is a mesmerizing journey through the Singalila National Park, offering breathtaking views of the Everest cluster and the iconic "Sleeping Buddha." Renowned for its spectacular sunrises and sunsets, the trek takes you through dense bamboo and rhododendron forests, providing a chance to spot rare Himalayan wildlife. The cultural diversity, crossing between India and Nepal, adds a unique touch with warm hospitality and a prevailing Buddhist influence. Culinary delights include a fusion of Nepali and Tibetan cuisine, making the trek a sensory experience. Beyond the physical adventure, the trek holds a spiritual journey towards the Sleeping Buddha, leaving participants with indelible memories and a profound connection to the Himalayas.',
     durationn: "5",

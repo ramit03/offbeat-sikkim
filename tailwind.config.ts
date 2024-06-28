@@ -81,7 +81,7 @@ const config: Config = {
         100:'#FFFFFF'
       },
       'error': {
-        DEFAULT:'#BA1A1A',
+        DEFAULT:'#DE3730',
         0:  '#000000',
         5:  '#2D0001',
         10: '#410002',
