@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { UpComingTours } from '@/constants'
+import { UpcomingTours } from '@/constants'
 import Cards from '../Cards'
 import { TripDetail } from '@/lib/types'
 

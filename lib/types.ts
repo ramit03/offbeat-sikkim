@@ -9,7 +9,6 @@ export interface CardProps {
     link: string;
   }
 
-
   export interface TripDetail {
     id:string,
     title:string,
@@ -30,6 +29,7 @@ export interface CardProps {
     thingsToCarryTrek?:ThingsToCarry[],
     personalMedicalKit?: string[],
     mandatoryDocuments?: MandatoryDocs[],
+    knowBeforeYouGo?: string[]
   }
   export interface ThingsToCarry{
     title:string,
