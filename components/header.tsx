@@ -147,9 +147,11 @@ function Header() {
                     </motion.div>
                   ))}
                   <Link href={""}>
-                    <Button className="labell">
+                  <motion.div variants={linkVars}>
+                  <Button className="labell">
                       Enquire Now
                     </Button>
+                  </motion.div>
                   </Link>
                 </div>
               </div>

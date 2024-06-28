@@ -1,4 +1,4 @@
-import { TripDetail } from "@/lib/types";
+import { TestimonialCard, TripDetail } from "@/lib/types";
 
 export const navlinks = [
   {
@@ -367,3 +367,22 @@ export const UpComingTours: TripDetail[] = [
     ],
   },
 ];
+
+
+export const FakeTestimonial : TestimonialCard[] = [
+  {
+    title: 'Ajay Prem',
+    rating: 5,
+    testimonial: "Landed safely in Chennai after being stuck in North Sikkim for a week due to the"
+  },
+  {
+    title: 'Ajay Prem',
+    rating: 4,
+    testimonial: "Landed safely in Chennai after being stuck in North Sikkim for a week due to the"
+  },
+  {
+    title: 'Ajay Prem',
+    rating: 3,
+    testimonial: "Landed safely in Chennai after being stuck in North Sikkim for a week due to the"
+  },
+]

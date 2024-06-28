@@ -68,3 +68,8 @@ export interface CardProps {
   
   export type FormData = Step1FormData & Step2FormData & Step3FormData;
   
+  export interface TestimonialCard {
+    title:string,
+    rating:number,
+    testimonial:string,
+  }
