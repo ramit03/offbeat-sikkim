@@ -63,7 +63,7 @@ export interface CardProps {
   export interface Step3FormData {
     noOfAdults: string;
     noOfChildren: string;
-    additionalInformation: string;
+    additionalInformation?: string;
   }
   
   export type FormData = Step1FormData & Step2FormData & Step3FormData;
@@ -72,4 +72,11 @@ export interface CardProps {
     title:string,
     rating:number,
     testimonial:string,
+  }
+
+  export interface ContactForm {
+    name:string,
+    email:string,
+    phone:string,
+    additional?:string;
   }

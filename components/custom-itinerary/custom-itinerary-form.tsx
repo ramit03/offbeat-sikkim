@@ -184,7 +184,6 @@ const Custom_Form = () => {
         {activeStep === 0 && (
           <Step1Form
             formData={formData}
-
             errors={errors}
             handleClear={handleClear}
             handleInputChange={handleInputChange}

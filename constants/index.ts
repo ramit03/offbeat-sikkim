@@ -19,9 +19,30 @@ export const navlinks = [
   {
     id: "4",
     name: "Contact",
-    link: "/contact",
+    link: "/Contact",
   },
 ];
+
+export const team = [
+  {
+    id:'1',
+    image:'team1',
+    name:'Rajen Rai',
+    role:'Co-Founder/Marketing Head',
+  },
+  {
+    id:'2',
+    image:'team2',
+    name:'Topden Gurung',
+    role:'Co-Founder/Operations Head',
+  },
+  {
+    id:'3',
+    image:'team3',
+    name:'Prabesh Subba',
+    role:'Co-Founder/Accounts Head'
+  }
+]
 
 export const placesAndDestinations: { [key: string]: string[] } = {
   Sikkim: ["Gangtok", "Pelling", "Yuksom", "Lachen", "Ravangla"],
@@ -1869,3 +1890,20 @@ export const Treks: TripDetail[] = [
   },
 ];
 
+export const FakeTestimonial : TestimonialCard[] = [
+  {
+    title: 'Ajay Prem',
+    rating: 5,
+    testimonial: "Landed safely in Chennai after being stuck in North Sikkim for a week due to the"
+  },
+  {
+    title: 'Ajay Prem',
+    rating: 4,
+    testimonial: "Landed safely in Chennai after being stuck in North Sikkim for a week due to the"
+  },
+  {
+    title: 'Ajay Prem',
+    rating: 3,
+    testimonial: "Landed safely in Chennai after being stuck in North Sikkim for a week due to the"
+  },
+]
