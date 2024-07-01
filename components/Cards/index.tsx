@@ -20,8 +20,8 @@ const Cards = ({ card }: TourCardProps) => {
         <Image src={`/${card.image}.jpg`} fill alt={card.title} />
       </div>
       <div className="px-2 py-5 text-[#051E13] flex justify-between items-end">
-        <div className="flex flex-col space-y-1">
-          <h2 className="titles md:titlem min-h-10 md:min-h-0">{card.title}</h2>
+        <div className="flex flex-col  space-y-1">
+          <h2 className="titles justify-self-end md:titlem min-h-10 md:min-h-12">{card.title}</h2>
           {card.durationn && <p className="bodys">{card.durationn} Nights {card.durationd} Days</p>}
           {
             card.costDouble &&   <p className="labell">
@@ -33,19 +33,19 @@ const Cards = ({ card }: TourCardProps) => {
              {
               card.originalPrice && (
                 <p className="bodys line-through">
-                ₹ {card.originalPrice} per head
+                ₹ {card.originalPrice} 
               </p>
               )
              } 
               <h4 className="labell text-[#075232]">
-                ₹{card.currentPrice} per head
+                ₹{card.currentPrice} 
               </h4>
             </>
           )}
         </div>
         <Link href={card.link}>
           <IconButton className="bg-primary hover:bg-primary/80">
-            <ArrowForwardIcon className="text-white text-[36px] md:text-[40px]" />
+            <ArrowForwardIcon className="text-white text-[28px] md:text-[32px]" />
           </IconButton>
         </Link>
       </div>

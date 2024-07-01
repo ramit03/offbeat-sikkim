@@ -1,13 +1,12 @@
 "use client";
 import Image from "next/image";
-
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navlinks } from "@/constants";
 import { cn } from "@/lib/utils";
-import {  IconButton, Stack } from "@mui/material";
+import { IconButton, Stack } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Button } from "./ui/button";
@@ -67,17 +66,26 @@ function Header() {
     return (
       <nav className="topbar bg-[#F8FEFA] relative top-0 z-30 flex flex-row w-full justify-between px-4 md:px-6 py-6 md:py-9">
         <Link href={"/"}>
-          <Image className="lg:w-40 lg:h-11" src={"/logo.svg"} width={96} height={28} alt="logo" />
+          <Image
+            className="md:w-28 md:h-9 lg:w-40 lg:h-11"
+            src={"/logo.svg"}
+            width={96}
+            height={28}
+            alt="logo"
+          />
         </Link>
         <IconButton className="lg:hidden" onClick={toggleMenu}>
           <MenuIcon />
         </IconButton>
 
-        <Stack className="hidden items-center lg:flex" direction={"row"} spacing={3}>
+        <Stack
+          className="hidden items-center lg:flex"
+          direction={"row"}
+          spacing={3}
+        >
           {navlinks.map((item) => (
             <motion.div variants={linkVars}>
               <Link
-                onClick={toggleMenu}
                 className={cn(
                   "space-y-6 hover:text-primary duration-700 transition-colors",
                   isCurrentPath(item.link) ? "text-primary" : "text-black"
@@ -88,10 +96,8 @@ function Header() {
               </Link>
             </motion.div>
           ))}
-          <Link href={""}>
-            <Button className="labell">
-              Enquire Now
-            </Button>
+          <Link href={"/Contact"}>
+            <Button className="labell">Enquire Now</Button>
           </Link>
         </Stack>
       </nav>
@@ -129,8 +135,8 @@ function Header() {
                   className="flex flex-row lg:self-end items-center gap-2"
                 ></motion.div>
                 <div className="lg:w-1/2 text-black pt-32 flex flex-col justify-end gap-10 2xl:gap-14">
-                  {navlinks.map((item) => (
-                    <motion.div variants={linkVars}>
+                  {navlinks.map((item,index) => (
+                    <motion.div key={index} variants={linkVars}>
                       <Link
                         onClick={toggleMenu}
                         className={cn(
@@ -147,11 +153,11 @@ function Header() {
                     </motion.div>
                   ))}
                   <Link href={""}>
-                  <motion.div variants={linkVars}>
-                  <Button className="labell">
-                      Enquire Now
-                    </Button>
-                  </motion.div>
+                    <motion.div variants={linkVars}>
+                      <Link href={'/Contact'}>
+                        <Button className="labell">Enquire Now</Button>
+                      </Link>
+                    </motion.div>
                   </Link>
                 </div>
               </div>

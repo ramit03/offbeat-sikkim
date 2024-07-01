@@ -6,6 +6,7 @@ import FeaturedArticles from "@/components/pages/featured-articles/page";
 import HeroHome from "@/components/pages/hero-home/page";
 import { Button } from "@/components/ui/button";
 import { CuratedPackages, Treks, UpcomingTours } from "@/constants";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -25,7 +26,9 @@ export default function Home() {
       <section className="flex flex-col justify-center items-center w-full gap-6 py-[60px] md:py-[88px]">
         <h2 className="headlines md:headlinem lg:headlinel text-secondary-oncontainer text-center">Have a Question?</h2>
         <p className="bodym md:titles text-[#202822] text-center">Reach out to us for your travel planning needs.</p>
+        <Link href={'/Contact'}>
         <Button className="w-fit">Contact Us</Button>
+        </Link>
       </section>
     </section>
     </main>

@@ -1907,3 +1907,44 @@ export const FakeTestimonial : TestimonialCard[] = [
     testimonial: "Landed safely in Chennai after being stuck in North Sikkim for a week due to the"
   },
 ]
+
+export const Destinations =[
+  {
+    id:'1',
+    image:'',
+    title:'Sikkim',
+    link:'/destinations/sikkim',
+  },
+  {
+    id:'2',
+    image:'',
+    title:'Darjeeling',
+    link:'/destinations/darjeeling',
+  },
+  {
+    id:'3',
+    image:'',
+    title:'Meghalaya',
+    link:'/destinations/meghalaya',
+  },
+  {
+    id:'1',
+    image:'',
+    title:'Arunachal Pradesh',
+    link:'/destinations/arunachal-pradesh',
+  },
+  {
+    id:'1',
+    image:'',
+    title:'Nagaland',
+    link:'/destinations/nagaland'
+  },
+
+]
+
+export const packagesData = [
+  UpcomingTours,
+  CuratedPackages,
+  Treks,
+
+]
