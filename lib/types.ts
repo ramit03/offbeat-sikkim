@@ -80,3 +80,11 @@ export interface CardProps {
     phone:string,
     additional?:string;
   }
+
+  export interface PackageForm{
+    name:string,
+    email:string,
+    phone:string,
+    travelstyle:string,
+    accommodation:string,
+  }

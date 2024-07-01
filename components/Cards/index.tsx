@@ -43,7 +43,7 @@ const Cards = ({ card }: TourCardProps) => {
             </>
           )}
         </div>
-        <Link href={card.link}>
+        <Link href={`/packages/${encodeURIComponent(card.link)}`}>
           <IconButton className="bg-primary hover:bg-primary/80">
             <ArrowForwardIcon className="text-white text-[28px] md:text-[32px]" />
           </IconButton>

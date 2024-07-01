@@ -1,7 +1,4 @@
 import { TestimonialCard, TripDetail } from "@/lib/types";
-
-
-
 export const navlinks = [
   {
     id: "1",
@@ -3713,7 +3710,8 @@ export const Sikkim = [SikkimCuratedPackages, SikkimTreks, SikkimUpcomingTours]
 
 export const Meghalaya = [MeghalayaCuratedPackages, MeghalayaUpcomingTours]
 
-export const Nagaland = [NagalandCuratedPackages, NagalandTreks]export const FakeTestimonial : TestimonialCard[] = [
+export const Nagaland = [NagalandCuratedPackages, NagalandTreks]
+export const FakeTestimonial : TestimonialCard[] = [
   {
     title: 'Ajay Prem',
     rating: 5,
@@ -3765,9 +3763,8 @@ export const Destinations =[
 
 ]
 
-export const packagesData = [
-  UpcomingTours,
-  CuratedPackages,
-  Treks,
-
+export const packagesData:TripDetail[] = [
+  ...UpcomingTours,
+  ...CuratedPackages,
+  ...Treks,
 ]
