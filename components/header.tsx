@@ -268,7 +268,7 @@ function Header() {
             <Link
               className={cn(
                 "space-y-6 hover:text-primary duration-700 transition-colors",
-                isExactPath("/about")
+                isExactPath("/About")
                   ? "text-primary"
                   : isHomepage
                     ? isScrolled
@@ -276,7 +276,7 @@ function Header() {
                       : "text-white"
                     : "text-black"
               )}
-              href={"/about"}
+              href={"/About"}
             >
               <p className="bodyl xl:titlel">About</p>
             </Link>
