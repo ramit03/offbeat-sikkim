@@ -1064,14 +1064,26 @@ function PackageClient({ decodedLink, packageType }: Props) {
                   </section>
                 </div>{" "}
                 <div className="relative p-6 hidden lg:flex w-full justify-center items-start">
-                  {" "}
                   {isUpcoming ? (
-                    <div className="hidden">
-                      {/* Section completely removed as requested */}
+                    <div className="sticky md:top-36 lg:top-20 z-10 w-full p-6 bg-[#E4EAE3] rounded-xl flex flex-col gap-4">
+                      {packageData.currentPrice && (
+                        <div className="py-2">
+                          <p className="labels md:titlel text-black text-balance">
+                            Confirm your booking with only
+                          </p>
+                          <p className="bodys md:headlines text-primary">
+                            INR 5,000 per head
+                          </p>
+                        </div>
+                      )}
+                      <Link href={`/booking/${packageData.link}`} className="w-full">
+                        <Button className="w-full justify-center text-center">
+                          <span className="labels md:labell w-full text-center">View Dates</span>
+                        </Button>
+                      </Link>
                     </div>
                   ) : (
                     <div className=" sticky md:top-28 lg:top-30 z-10  flex-col flex gap-4">
-                      
                       <PackageContactForm link={decodedLink!} packageTitle={packageData.title} handleClose={() => {}} />
                     </div>
                   )}
