@@ -28,6 +28,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import ClearIcon from "@mui/icons-material/Clear";
 import React, { useEffect, useRef, useState, MutableRefObject } from "react";
 import ContactDialog from "@/components/contact-dialog/page";
+import LogoutBookingWidget from "@/components/logout-widget";
 import Sliderr from "@/components/Slider";
 import Link from "next/link";
 import ShareIcon from "@mui/icons-material/Share";
@@ -145,7 +146,6 @@ function ThumbnailPlugin(
 }
 
 function PackageClient({ decodedLink, packageType }: Props) {
- 
   const [value, setValue] = useState(0);
   const [isShareOpen, setIsShareOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -458,7 +458,6 @@ function PackageClient({ decodedLink, packageType }: Props) {
                 )}
               </div>
             </section>
-
             <section
               className={`hidden lg:flex flex-col lg:flex-row justify-between gap-6 pt-9 px-4 relative md:gap-6 rounded-xl overflow-hidden`}
             >
@@ -543,9 +542,9 @@ function PackageClient({ decodedLink, packageType }: Props) {
                   </>
                 )}
               </section>
-
               <section className="flex flex-row">
                 <div className=" w-full flex flex-col lg:w-2/3">
+                  {" "}
                   <section
                     ref={navRef}
                     className="bg-neutral-95 titlem md:titlel items-center 2xl:justify-center whitespace-nowrap shadow-sm hide-scrollbar sticky top-16 lg:top-20 z-10 overflow-x-scroll pt-6 rounded-xl my-6  px-6 flex gap-4 md:gap-6 xl:gap-8 2xl:gap-10"
@@ -672,8 +671,7 @@ function PackageClient({ decodedLink, packageType }: Props) {
                         </AccordionDetails>
                       </Accordion>
                     ))}
-                  </section>
-
+                  </section>{" "}
                   <section className="flex justify-end md:justify-start pb-8">
                     {!isUpcoming && (
                       <ContactDialog
@@ -682,13 +680,7 @@ function PackageClient({ decodedLink, packageType }: Props) {
                         title="Enquire Now"
                       />
                     )}
-                    {isUpcoming && (
-                      <Link href={`/booking/${packageData.link}`}>
-                        <Button>View Dates</Button>
-                      </Link>
-                    )}
                   </section>
-
                   {packageData.privateTrip && (
                     <section className="py-6 bg-[#E4EAE3] rounded-xl px-4 md:px-6 flex flex-col gap-4 w-fit scroll-mt-56 my-12 md:my-[76px]">
                       <h2 className="headlines text-[#171D19]">
@@ -865,7 +857,6 @@ function PackageClient({ decodedLink, packageType }: Props) {
                       )}
                     </section>
                   )}
-
                   <section className="my-12  flex flex-col gap-12 md:gap-4">
                     {(packageData.thingsToCarry ||
                       packageData.thingsToCarryTrek) && (
@@ -892,6 +883,7 @@ function PackageClient({ decodedLink, packageType }: Props) {
                               direction={"column"}
                               gap={1}
                             >
+                              {" "}
                               <p className="text-[#171D19] bodyl">
                                 {item.title}
                               </p>
@@ -963,7 +955,6 @@ function PackageClient({ decodedLink, packageType }: Props) {
                       </div>
                     )}
                   </section>
-
                   <section className=" flex flex-col gap-12 md:gap-4">
                     {packageData.mandatoryDocuments && (
                       <div
@@ -1071,25 +1062,12 @@ function PackageClient({ decodedLink, packageType }: Props) {
                       </ExpandableContent>
                     )}
                   </section>
-                </div>
-
+                </div>{" "}
                 <div className="relative p-6 hidden lg:flex w-full justify-center items-start">
+                  {" "}
                   {isUpcoming ? (
-                    <div className="flex flex-col gap-4 sticky md:top-28 lg:top-20 z-10 w-full p-6 bg-[#E4EAE3] rounded-xl">
-                      {packageData.currentPrice && (
-                        <Stack direction={"column"} gap={1}>
-                          <p className="labels md:titlel text-black text-balance">
-                            Confirm your booking with only
-                          </p>
-                          <p className="bodys md:headlines text-primary">
-                            INR 5,000 per head
-                          </p>
-                        </Stack>
-                      )}
-
-                      <Link href={`/booking/${packageData.link}`}>
-                        <Button>View Dates</Button>
-                      </Link>
+                    <div className="hidden">
+                      {/* Section completely removed as requested */}
                     </div>
                   ) : (
                     <div className=" sticky md:top-28 lg:top-30 z-10  flex-col flex gap-4">
@@ -1098,8 +1076,7 @@ function PackageClient({ decodedLink, packageType }: Props) {
                     </div>
                   )}
                 </div>
-              </section>
-
+              </section>{" "}
               <div className="my-4">
                 <section className="flex justify-end md:justify-start">
                   {!isUpcoming && (
@@ -1109,14 +1086,8 @@ function PackageClient({ decodedLink, packageType }: Props) {
                       title="Enquire Now"
                     />
                   )}
-                  {isUpcoming && (
-                    <Link href={`/booking/${packageData.link}`}>
-                      <Button>View Dates</Button>
-                    </Link>
-                  )}
                 </section>
               </div>
-
               <section className="flex flex-col py-12 md:py-[76px] gap-4 md:gap-9">
                 <h2 className="text-secondary-oncontainer headlines md:displays lg:displaym">
                   Related Packages
