@@ -27,8 +27,8 @@ const ContactDialog: React.FC<ContactDialogProps> = ({ link, packageTitle, title
 
     return (
     <>
-      <Button className="w-fit" onClick={handleClickOpen}>
-      {title}
+      <Button className="w-full justify-center text-center" onClick={handleClickOpen}>
+        {title}
       </Button>
 
       <Dialog

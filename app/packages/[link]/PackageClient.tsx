@@ -56,11 +56,13 @@ import {
   KeenSliderInstance,
 } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import PackageContactForm from "@/components/package-contact/page";
 import ExpandableContent from "@/components/expandable-div/page";
 import dynamic from "next/dynamic";
 import NextJsImage from "@/components/Lightbox/image";
 import { fetchPackageData } from "@/lib/fetchPackageData";
 const Lightbox = dynamic(() => import("@/components/Lightbox/page"));
+
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -1091,13 +1093,8 @@ function PackageClient({ decodedLink, packageType }: Props) {
                     </div>
                   ) : (
                     <div className=" sticky md:top-28 lg:top-30 z-10  flex-col flex gap-4">
-                      <h2 className="headlines text-center">
-                        Got any questions?
-                      </h2>
-                      <h4 className="titlem text-center">
-                        Allow us to help you
-                      </h4>
-                      <ContactForm />
+                      
+                      <PackageContactForm link={decodedLink!} packageTitle={packageData.title} handleClose={() => {}} />
                     </div>
                   )}
                 </div>
@@ -1127,53 +1124,36 @@ function PackageClient({ decodedLink, packageType }: Props) {
                 <Sliderr items={relatedPackages ?? []} />
               </section>
 
-              <section className="flex flex-col justify-center items-center w-full gap-6 py-[60px]">
-                <h2 className="headlines md:headlinem lg:headlinel text-secondary-oncontainer text-center">
-                  Have a Question?
-                </h2>
-                <p className="bodym md:titles text-[#202822] text-center">
-                  Reach out to us for your travel planning needs.
-                </p>
-
-                <Link href={"/Contact"}>
-                  <Button>Contact Us</Button>
-                </Link>
-              </section>
+              {/* Removed PackageContactForm from the bottom as per new requirements */}
             </div>
           </div>
-          <div className="flex lg:hidden bg-[#F6FBF4] rounded-t-xl  w-full p-4 shadow-footerShadow sticky z-30 bottom-0 left-0 flex-row justify-between end items-center">
-            <Stack
-              className="w-full"
-              alignItems={"center"}
-              direction={"row"}
-              justifyContent={"space-between"}
-              gap={{ xs: 1, md: 3 }}
-            >
+          <div className="lg:hidden bg-[#F6FBF4] rounded-t-xl w-full p-4 shadow-footerShadow sticky z-30 bottom-0 left-0">
+            <div className="flex flex-col gap-2 w-full">
               {packageData.currentPrice && (
-                <Stack direction={"column"} gap={1} className="w-1/2 py-2">
+                <div className="py-2">
                   <p className="labels md:labell text-black text-balance">
-                    Confirm your booking with only{" "}
+                    Confirm your booking with only
                   </p>
-                  <p className="bodys  font-semibold md:bodyl text-primary">
+                  <p className="bodys font-semibold md:bodyl text-primary">
                     INR 5,000 per head
                   </p>
-                </Stack>
+                </div>
               )}
               {isUpcoming && (
-                <Link href={`/booking/${packageData.link}`}>
-                  <Button>
-                    <span className="labels md:labell">View Dates</span>
+                <Link href={`/booking/${packageData.link}`} className="w-full">
+                  <Button className="w-full justify-center text-center">
+                    <span className="labels md:labell w-full text-center">View Dates</span>
                   </Button>
                 </Link>
               )}
-            </Stack>
-            {!isUpcoming && (
-              <ContactDialog
-                link={decodedLink!}
-                packageTitle={packageData.title}
-                title="Enquire Now"
-              />
-            )}
+              {!isUpcoming && (
+                <ContactDialog
+                  link={decodedLink!}
+                  packageTitle={packageData.title}
+                  title="Enquire Now"
+                />
+              )}
+            </div>
           </div>
         </>
       )}
