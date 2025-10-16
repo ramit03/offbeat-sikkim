@@ -130,7 +130,7 @@ export default function HeroHome({
               className="items-end"
             >
               <Image
-                src={"/images/netourism awards.png"}
+                src={"/images/netourism awards.png" }
                 width={150}
                 height={90}
                 alt="Tripadvisor"
