@@ -91,55 +91,32 @@ export default function HeroHome({
         }}
         className="z-10 absolute left-4 right-4 bottom-4 md:left-8 md:bottom-8 text-center"
       >
-        <Stack
-          className="flex flex-wrap gap-2 md:gap-4 items-end justify-center"
-          direction={"row"}
-          gap={{ xs: 2, sm: 6 }}
-        >
-          
-          <Link
-            target="_blank"
-            href={
-              "https://www.tripadvisor.in/Attraction_Review-g659796-d26790117-Reviews-Offbeatsikkim-Gangtok_East_Sikkim_Sikkim.html"
-            }
-          >
-            <Stack
-              direction={"row"}
-              gap={1}
-              className="items-end"
-            >
-              <Image
-                src={"/images/travelers choice award offbeat sikkim.webp"}
-                width={150}
-                height={105}
-                alt="Tripadvisor"
-                className="rounded-lg h-24 md:h-32 w-auto object-cover opacity-85"
-              />
-              
+        <Stack className="flex flex-wrap gap-2 md:gap-4 items-center justify-center" direction={"row"} gap={{ xs: 2, sm: 6 }}>
+          <Link target="_blank" href={"https://www.instagram.com/p/DPtQ7BIEkZi/"}>
+            <Stack direction={"column"} gap={1} className="w-24 md:w-48 items-center">
+              <div className="w-full overflow-hidden rounded-lg">
+                <Image src={"/images/netourism awards.png"} width={150} height={90} alt="Netourism" className="block w-24 md:w-[240px] h-auto object-contain opacity-85 shadow-sm" />
+              </div>
             </Stack>
           </Link>
-          <Link
-            target="_blank"
-            href={
-              "https://www.instagram.com/p/DPtQ7BIEkZi/"
-            }
-          >
-            <Stack
-              direction={"row"}
-              gap={4}
-              className="items-end"
-            >
-              <Image
-                src={"/images/netourism awards.png" }
-                width={150}
-                height={90}
-                alt="Tripadvisor"
-                className="rounded-lg h-24 md:h-32 w-auto object-cover opacity-85"
-              />
-              
+
+          <Link target="_blank" href={"https://www.tripadvisor.in/Attraction_Review-g659796-d26790117-Reviews-Offbeatsikkim-Gangtok_East_Sikkim_Sikkim.html"}>
+            <Stack direction={"column"} gap={1} className="w-24 md:w-48 items-center">
+              <div className="relative w-full overflow-hidden rounded-lg">
+                <Image src={"/images/travelers choice award offbeat sikkim.webp"} width={150} height={105} alt="Tripadvisor" className="block w-24 md:w-[240px] h-auto object-contain opacity-85 shadow-sm" />
+              </div>
+            </Stack>
+          </Link>
+
+          <Link target="_blank" href={"https://www.instagram.com/p/DPjthkeEp_T/"}>
+            <Stack direction={"column"} gap={1} className="w-24 md:w-56 items-center">
+              <div className="relative w-full overflow-visible">
+                <Image src={"/images/bestoffbeatnominee.png"} width={240} height={240} alt="Nominee" className="block w-24 md:w-[300px] h-auto object-contain rounded-lg opacity-85 shadow-sm" />
+              </div>
             </Stack>
           </Link>
         </Stack>
+        
       </motion.div>
 
       {/* Rotating logo removed */}
